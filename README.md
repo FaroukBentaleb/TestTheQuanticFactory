@@ -9,8 +9,8 @@ Application web permettant de trouver des îlots de fraîcheur à Paris (équipe
 
 ## Lancer le projet
 
-- npm install
-- npm run dev
+npm install
+npm run dev
 
 ## Datasets utilisés
 - Îlots de fraîcheur - Équipements et activités

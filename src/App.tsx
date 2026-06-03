@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css'
-import { getAllData, getDataByFilter } from './api/commun';
-import type { Commun } from './types/commun';
+import { getDataByFilter } from './api/commun';
+import type { Commun } from './types/Commun';
 
 function App() {
   const [data, setData] = useState<Commun[]>([])
@@ -29,14 +29,14 @@ function App() {
           <option value="fontaine">Fontaines à boire</option>
         </select>
         <div>
-          <input type="radio" name='payant' checked={payant === 'Oui'} placeholder='Filtrer par nom' onChange={(e) => setPayant('Oui')} />
+          <input type="radio" name='payant' checked={payant === 'Oui'} placeholder='Filtrer par nom' onChange={() => setPayant('Oui')} />
           <label htmlFor="payant">Payant</label>
         </div>
         <div>
-          <input type="radio" name='payant' checked={payant === 'Non'} placeholder='Filtrer par nom' onChange={(e) => setPayant('Non')} />
+          <input type="radio" name='payant' checked={payant === 'Non'} placeholder='Filtrer par nom' onChange={() => setPayant('Non')} />
           <label htmlFor="payant">Non Payant</label>
         </div>
-        <input type="button" value='Réinitialiser les filtres' onClick={(e) => {
+        <input type="button" value='Réinitialiser les filtres' onClick={() => {
           setPostal('');
           setType('');
           setPayant('');
