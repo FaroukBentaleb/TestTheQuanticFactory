@@ -1,4 +1,4 @@
-import type { Commun } from '../types/commun';
+import type { Commun } from '../types/Commun';
 import { getEquipements } from './equipements';
 import { getEspacesVerts } from './espaces_verts';
 import { getFontaines } from './fontaines';
