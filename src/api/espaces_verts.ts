@@ -1,0 +1,8 @@
+import { API_URL } from '../utils/constants';
+export async function getEspacesVerts() {
+  const response = await fetch(API_URL + '/api/explore/v2.1/catalog/datasets/ilots-de-fraicheur-espaces-verts-frais/records?limit=20');
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+  return response.json();
+}
