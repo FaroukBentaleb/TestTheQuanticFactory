@@ -17,7 +17,9 @@ export async function getAllData() {
             arrondissement: item.arrondissement,
             type: item.type,
             payant: item.payant,
-            source: 'equipement'
+            source: 'equipement',
+            lat: item.geo_point_2d.lat,
+            lon: item.geo_point_2d.lon
         });
     });
 
@@ -28,7 +30,9 @@ export async function getAllData() {
             arrondissement: item.arrondissement,
             type: item.type,
             payant: 'Non',
-            source: 'espace_vert'
+            source: 'espace_vert',
+            lat: item.geo_point_2d.lat,
+            lon: item.geo_point_2d.lon
         });
     });
 
@@ -39,17 +43,20 @@ export async function getAllData() {
             arrondissement: item.commune,
             type: item.type_objet,
             payant: 'Non',
-            source: 'fontaine'
+            source: 'fontaine',
+            lat: item.geo_point_2d.lat,
+            lon: item.geo_point_2d.lon
         });
     });
 
     return commun;
 }
-export async function getDataByFilter(postal: string, type: string, payant: string, source: string, arrondissement: string) {
+export async function getDataByFilter(arrondissement: string, postal: string, type: string, payant: string, source: string) {
     const allData = await getAllData();
     if(!postal && !type && !payant && !source && !arrondissement) {
         return allData;
     }
+    console.log("src: ",source);
     return allData.filter((item) => item.adr?.includes(postal) 
     && item.type?.includes(type) 
     && item.payant?.includes(payant) 

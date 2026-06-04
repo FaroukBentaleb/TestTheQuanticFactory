@@ -5,4 +5,6 @@ export interface Commun {
     type: string;
     payant: string;
     source: string;
+    lat: number,
+    lon: number
 }
