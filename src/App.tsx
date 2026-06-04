@@ -42,6 +42,11 @@ function App() {
             <div className="w-12 h-12 border-4 border-green-500 border-t-transparent rounded-full animate-spin"></div>
           </div>
         )}
+        {!loading && data.length === 0 && (
+          <div className="flex justify-center items-center py-20">
+            <p className="text-gray-500 text-lg">Aucun résultat trouvé</p>
+          </div>
+        )}
         <div className="grid grid-cols-3 gap-6">
           {data.map((item, key) => (
             <div key={key} className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-6 flex flex-col gap-3 border-t-4 border-green-500">
