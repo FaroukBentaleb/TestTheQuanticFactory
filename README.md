@@ -48,7 +48,7 @@ Paris Cool Spots agrège **3 datasets Paris OpenData** pour localiser facilement
 ## Lancer le projet
 
 ```bash
-git clone https://github.com/<your-username>/paris-cool-spots.git
+git clone https://github.com/FaroukBentaleb/TestTheQuanticFactory.git
 cd paris-cool-spots
 npm install
 npm run dev
@@ -64,16 +64,27 @@ L'application est accessible sur `http://localhost:5173`.
 
 ```
 src/
+├── api/
+│   ├── commun.ts           # Fetch + normalisation commune (interface Commun)
+│   ├── equipements.ts      # Dataset îlots de fraîcheur — équipements
+│   ├── espaces_verts.ts    # Dataset îlots de fraîcheur — espaces verts
+│   └── fontaines.ts        # Dataset fontaines à boire
+├── assets/
+│   └── hero.png
 ├── components/
-│   ├── Map.tsx            # Carte Leaflet principale
-│   ├── PopupContent.tsx   # Popup enrichi avec Wikipedia
-│   ├── FilterPanel.tsx    # Filtres arrondissement / type / tarif
-│   └── ...
+│   ├── Map.tsx             # Carte Leaflet principale
+│   └── PopupContent.tsx    # Popup enrichi avec image Wikipedia
+├── hooks/                  # Custom React hooks
+├── pages/                  # Vues / routes
 ├── types/
-│   └── Commun.ts          # Interface unifiée des 3 datasets
-├── hooks/
-│   └── useSpots.ts        # Fetch + normalisation des données
-└── App.tsx
+│   ├── Commun.ts           # Interface unifiée des 3 sources
+│   ├── Equipement.ts       # Type brut API équipements
+│   ├── Espace_vert.ts      # Type brut API espaces verts
+│   └── Fontaine.ts         # Type brut API fontaines
+├── utils/
+│   └── constants.ts        # URLs API, valeurs partagées
+├── App.tsx
+└── main.tsx
 ```
 
 ---
