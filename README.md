@@ -1,26 +1,83 @@
-# Paris Cool Spots 🌿
+# 🌿 Paris Cool Spots
 
-Application web permettant de trouver des îlots de fraîcheur à Paris (équipements, espaces verts, fontaines).
+> Trouvez les îlots de fraîcheur à Paris — équipements, espaces verts et fontaines à boire — sur une carte interactive.
 
-## Stack
-- React + Vite + TypeScript
-- Tailwind CSS
-- Paris OpenData API
+🔗 **[pariscoolspots.netlify.app](https://pariscoolspots.netlify.app/)**
+
+---
+
+## Aperçu
+
+Paris Cool Spots agrège **3 datasets Paris OpenData** pour localiser facilement les refuges climatiques de la capitale. L'application permet de filtrer, explorer et visualiser chaque lieu avec ses informations clés.
+
+---
+
+## Fonctionnalités
+
+- 🗺️ **Carte interactive** avec marqueurs clusterisés par type de lieu
+- 🔍 **Filtres combinés** — arrondissement, catégorie, gratuit / payant
+- 📸 **Aperçu enrichi** — image Wikipedia + adresse + type pour chaque marqueur
+- 📊 **3 sources normalisées** en une interface unifiée (`Commun`)
+- ⚡ **Chargement parallèle** des datasets via `Promise.all`
+
+---
+
+## Stack technique
+
+| Couche | Technologie |
+|---|---|
+| Frontend | React 18 + TypeScript + Vite |
+| Style | Tailwind CSS v4 |
+| Carte | Leaflet + React-Leaflet |
+| Données | Paris OpenData API (JSON) |
+| Enrichissement | Wikipedia REST API |
+| Déploiement | Netlify |
+
+---
+
+## Datasets utilisés
+
+| Dataset | Source |
+|---|---|
+| Îlots de fraîcheur — Équipements & activités | [opendata.paris.fr](https://opendata.paris.fr) |
+| Îlots de fraîcheur — Espaces verts | [opendata.paris.fr](https://opendata.paris.fr) |
+| Fontaines à boire | [opendata.paris.fr](https://opendata.paris.fr) |
+
+---
 
 ## Lancer le projet
 
+```bash
+git clone https://github.com/<your-username>/paris-cool-spots.git
+cd paris-cool-spots
 npm install
 npm run dev
+```
 
-## Datasets utilisés
-- Îlots de fraîcheur - Équipements et activités
-- Îlots de fraîcheur - Espaces verts
-- Fontaines à boire
+L'application est accessible sur `http://localhost:5173`.
 
-## Fonctionnalités
-- Affichage des équipements et activités
-- Filtres par arrondissement, type, gratuit/payant
-- Consultation de plusieurs datasets
+> Aucune variable d'environnement requise — les APIs utilisées sont publiques.
+
+---
+
+## Structure du projet
+
+```
+src/
+├── components/
+│   ├── Map.tsx            # Carte Leaflet principale
+│   ├── PopupContent.tsx   # Popup enrichi avec Wikipedia
+│   ├── FilterPanel.tsx    # Filtres arrondissement / type / tarif
+│   └── ...
+├── types/
+│   └── Commun.ts          # Interface unifiée des 3 datasets
+├── hooks/
+│   └── useSpots.ts        # Fetch + normalisation des données
+└── App.tsx
+```
+
+---
 
 ## Auteur
-Farouk Ben Taleb
+
+**Farouk Ben Taleb** — Projet réalisé dans le cadre d'un test technique Full-Stack.
