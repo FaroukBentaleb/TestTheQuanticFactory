@@ -39,9 +39,9 @@ Paris Cool Spots agrège **3 datasets Paris OpenData** pour localiser facilement
 
 | Dataset | Source |
 |---|---|
-| Îlots de fraîcheur — Équipements & activités | [opendata.paris.fr](https://opendata.paris.fr) |
-| Îlots de fraîcheur — Espaces verts | [opendata.paris.fr](https://opendata.paris.fr) |
-| Fontaines à boire | [opendata.paris.fr](https://opendata.paris.fr) |
+| Îlots de fraîcheur — Équipements & activités | [opendata.paris.fr/Equipements](https://opendata.paris.fr/explore/dataset/ilots-de-fraicheur-equipements-activites/information/?disjunctive.type&disjunctive.payant&disjunctive.arrondissement&disjunctive.horaires_periode) |
+| Îlots de fraîcheur — Espaces verts | [opendata.paris.fr/Espaces verts](https://parisdata.opendatasoft.com/explore/dataset/ilots-de-fraicheur-espaces-verts-frais/information/?disjunctive.type&disjunctive.arrondissement&disjunctive.statut_ouverture&disjunctive.ouvert_24h&disjunctive.canicule_ouverture&disjunctive.ouverture_estivale_nocturne&disjunctive.horaires_periode&basemap=jawg.dark&location=12,48.85872,2.34748) |
+| Fontaines à boire | [opendata.paris.fr/Fontaines](https://parisdata.opendatasoft.com/explore/dataset/fontaines-a-boire/information/?disjunctive.type_objet&disjunctive.modele&disjunctive.commune&disjunctive.statut_obj&disjunctive.udi&disjunctive.dispo&basemap=jawg.dark&location=12,48.83345,2.34916) |
 
 ---
 
