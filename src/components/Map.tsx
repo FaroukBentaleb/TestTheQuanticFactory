@@ -9,7 +9,7 @@ interface MapProps {
     source: string;
 }
 
-// Expose map instance to parent via ref
+
 function MapController({ flyTarget }: { flyTarget: { lat: number; lon: number } | null }) {
     const map = useMap();
     const prevTarget = useRef<{ lat: number; lon: number } | null>(null);
@@ -48,7 +48,7 @@ function getIcon(source: string) {
     });
 }
 
-export function Map({ data, source }: MapProps) {
+export function Map({ data }: MapProps) {
     const [userLocation, setUserLocation] = useState<{ lat: number; lon: number } | null>(null);
     const [flyTarget, setFlyTarget] = useState<{ lat: number; lon: number } | null>(null);
 
