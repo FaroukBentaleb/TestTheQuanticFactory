@@ -48,7 +48,7 @@ function getIcon(source: string) {
     });
 }
 
-export function Map({ data }: MapProps) {
+export function Map({ data, source }: MapProps) {
     const [userLocation, setUserLocation] = useState<{ lat: number; lon: number } | null>(null);
     const [flyTarget, setFlyTarget] = useState<{ lat: number; lon: number } | null>(null);
 

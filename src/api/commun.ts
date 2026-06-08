@@ -56,7 +56,6 @@ export async function getDataByFilter(arrondissement: string, postal: string, ty
     if(!postal && !type && !payant && !source && !arrondissement) {
         return allData;
     }
-    console.log("src: ",source);
     return allData.filter((item) => item.adr?.includes(postal) 
     && item.type?.includes(type) 
     && item.payant?.includes(payant) 
